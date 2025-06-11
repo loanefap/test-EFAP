@@ -1,95 +1,102 @@
+Index.html
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aya Nakamura</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aya Nakamura - Site Officiel</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <header>
-    <div class="container">
-      <h1 class="logo">Aya Nakamura</h1>
-      <nav>
-        <div class="burger" id="burger">&#9776;</div>
-        <ul class="nav-links" id="nav-links">
-          <li><a href="#about">À propos</a></li>
-          <li><a href="#news">Actualités</a></li>
-          <li><a href="#music">Discographie</a></li>
-          <li><a href="#video">Vidéo</a></li>
-          <li><a href="#socials">Réseaux</a></li>
-        </ul>
-      </nav>
+  <header class="header">
+    <div class="banner">
+      <h1>Aya Nakamura</h1>
+      <p>Chanteuse française d'origine malienne</p>
     </div>
+    <nav class="nav">
+      <a href="#about">À propos</a>
+      <a href="#news">Actualités</a>
+      <a href="#discography">Discographie</a>
+      <a href="#gallery">Galerie</a>
+      <a href="#video">Clip</a>
+      <a href="#streaming">Écouter</a>
+      <a href="#socials">Réseaux</a>
+    </nav>
   </header>
 
   <main>
-    <section id="about" class="section">
-      <h2>À propos</h2>
-      <p>Aya Nakamura est une chanteuse française d'origine malienne révélée par son titre "Djadja". Elle est aujourd'hui une des artistes francophones les plus influentes.</p>
+    <section id="about" class="section about">
+      <h2>À propos d'Aya</h2>
+      <p>
+        Aya Nakamura, née en 1995 à Bamako, Mali, est une chanteuse et auteure-compositrice française.  
+        Elle a explosé sur la scène musicale avec son tube "Djadja" en 2018, qui est devenu un hit international.
+      </p>
     </section>
 
-    <section id="news" class="section">
+    <section id="news" class="section news">
       <h2>Actualités</h2>
-      <p>Sortie récente du single <strong>"Doudou"</strong>. Disponible sur toutes les plateformes.</p>
-    </section>
-
-    <section id="music" class="section">
-      <h2>Discographie</h2>
       <ul>
-        <li>2017 - Journal Intime</li>
-        <li>2018 - Nakamura</li>
-        <li>2023 - DNK</li>
+        <li>Le 14 mai 2025, Aya Nakamura a sorti son nouveau single intitulé <strong>"Doudou"</strong>.</li>
+        <li>Elle continue de rassembler des millions d’auditeurs à travers le monde sur Spotify et YouTube.</li>
+        <li>Pas d’apparition récente au Met Gala ou événements internationaux majeurs confirmés.</li>
       </ul>
     </section>
 
-    <section id="video" class="section">
-      <h2>Clip Officiel</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/prd-oyaxhCs" frameborder="0" allowfullscreen></iframe>
+    <section id="discography" class="section discography">
+      <h2>Discographie Sélective</h2>
+      <ul>
+        <li><strong>2017</strong> - Journal intime</li>
+        <li><strong>2018</strong> - Nakamura</li>
+        <li><strong>2023</strong> - Aya</li>
+      </ul>
     </section>
 
-    <section id="socials" class="section">
-      <h2>Suivre Aya</h2>
-      <div class="socials">
-        <a href="#">Instagram</a>
-        <a href="#">TikTok</a>
-        <a href="#">YouTube</a>
+    <section id="gallery" class="section gallery">
+      <h2>Galerie</h2>
+      <div class="images">
+        <img src="images/aya1.jpg" alt="Aya Nakamura en concert" />
+        <img src="images/aya2.jpg" alt="Portrait presse d'Aya Nakamura" />
+        <img src="images/aya3.jpg" alt="Aya Nakamura en séance photo" />
+      </div>
+    </section>
+
+    <section id="video" class="section video">
+      <h2>Clip officiel : Doudou</h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/prd-oyaxhCs?si=pQyzjwOrPeDCXN2N" 
+              title="Clip officiel Doudou Aya Nakamura" frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen></iframe>
+    </section>
+
+    <section id="streaming" class="section streaming">
+      <h2>Écouter Aya Nakamura</h2>
+      <div class="platforms">
+        <a href="https://open.spotify.com/artist/0tYJmjT1bqPtY4i7d2d85F" target="_blank" rel="noopener">Spotify</a>
+        <a href="https://music.apple.com/fr/artist/aya-nakamura/1298759187" target="_blank" rel="noopener">Apple Music</a>
+        <a href="https://www.deezer.com/fr/artist/5894972" target="_blank" rel="noopener">Deezer</a>
+        <a href="https://www.youtube.com/@AyaNakamura" target="_blank" rel="noopener">YouTube</a>
+      </div>
+    </section>
+
+    <section id="socials" class="section socials">
+      <h2>Suivez Aya sur les réseaux</h2>
+      <div class="social-links">
+        <a href="https://www.instagram.com/ayanakamura/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.tiktok.com/@ayanakamura" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://twitter.com/ayanakamura" target="_blank" rel="noopener">Twitter</a>
+        <a href="https://snapchat.com/add/ayanakamura" target="_blank" rel="noopener">Snapchat</a>
+        <a href="https://www.facebook.com/ayanakamuraofficiel" target="_blank" rel="noopener">Facebook</a>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Aya Nakamura - Site réalisé par Loan</p>
+    <p>© 2025 Aya Nakamura - Site créé par Loan</p>
   </footer>
 
-  <script>
-    // Burger menu toggle
-    const burger = document.getElementById('burger');
-    const navLinks = document.getElementById('nav-links');
-
-    burger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-
-    // Scroll animation
-    const sections = document.querySelectorAll('.section');
-    const options = {
-      threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      });
-    }, options);
-
-    sections.forEach(section => {
-      observer.observe(section);
-    });
-  </script>
 </body>
 </html>
+

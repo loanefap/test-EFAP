@@ -1,143 +1,165 @@
+Style.css
+
+/* Reset minimal */
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  line-height: 1.6;
-  background: #fff;
+  margin: 0;
+  font-family: 'Alegreya', sans-serif;
+  background-color: #fff;
   color: #222;
+  line-height: 1.6;
 }
 
-header {
-  background: #ff3b6b;
-  color: white;
-  padding: 20px 0;
+.header .banner {
+  background: #ec7291;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 0 0 60px 60px;
+  box-shadow: 0 6px 18px rgba(255, 59, 107, 0.3);
+}
+
+.header .banner h1 {
+  font-size: 3.5rem;
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.25);
+}
+
+.header .banner p {
+  margin-top: 12px;
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  background: #fff;
+  padding: 15px 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 10;
 }
 
-.container {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-}
-
-nav a {
+.nav a {
+  color: #ff3b6b;
+  font-weight: 700;
   text-decoration: none;
-  color: white;
-  font-weight: 600;
-  transition: color 0.3s;
+  font-size: 1.05rem;
+  padding: 10px 18px;
+  border-radius: 30px;
+  transition: background 0.3s ease;
 }
 
-nav a:hover {
-  color: #ffccda;
+.nav a:hover,
+.nav a:focus {
+  background: #ff3b6b;
+  color: #fff;
+  outline: none;
 }
 
-.burger {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  nav ul {
-    display: none;
-    flex-direction: column;
-    background: #ff3b6b;
-    width: 100%;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    text-align: center;
-  }
-
-  nav ul.active {
-    display: flex;
-  }
-
-  .burger {
-    display: block;
-  }
+main {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 20px 60px;
 }
 
 .section {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease-out;
-  padding: 80px 20px;
-  max-width: 800px;
-  margin: auto;
-}
-
-.section.visible {
-  opacity: 1;
-  transform: translateY(0);
+  margin-bottom: 60px;
 }
 
 .section h2 {
-  font-size: 2rem;
+  font-weight: 700;
+  font-size: 2.3rem;
   color: #ff3b6b;
+  border-left: 6px solid #ff3b6b;
+  padding-left: 15px;
   margin-bottom: 20px;
 }
 
-.section p, .section ul {
-  font-size: 1.1rem;
+.about p,
+.news ul,
+.discography ul {
+  font-size: 1.15rem;
+  color: #444;
 }
 
-ul {
-  padding-left: 20px;
+.news ul,
+.discography ul {
+  list-style: none;
+  padding-left: 0;
 }
 
-iframe {
+.news li,
+.discography li {
+  margin-bottom: 14px;
+}
+
+.gallery .images {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 280px;
+  border-radius: 18px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(255,59,107,0.35);
+}
+
+.video iframe {
   width: 100%;
   max-width: 560px;
-  height: 315px;
-  border: none;
-  border-radius: 10px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(255, 59, 107, 0.15);
+  display: block;
+  margin: 0 auto;
 }
 
+.streaming,
 .socials {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.socials a {
-  text-decoration: none;
-  background: #ff3b6b;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 30px;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-
-.socials a:hover {
-  background: #e62e5c;
-}
-
-footer {
+  background-color: #fafafa;
+  padding: 50px 20px;
+  border-radius: 25px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
   text-align: center;
-  padding: 30px;
-  background: #f5f5f5;
-  font-size: 0.9rem;
-  color: #777;
+  margin-bottom: 80px;
 }
+
+.platforms,
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.platforms a,
+.social-links a {
+  background: #ff3b6b;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.1rem;
+  box-shadow: 0 6
+
