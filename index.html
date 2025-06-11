@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aya Nakamura</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1 class="logo">Aya Nakamura</h1>
+      <nav>
+        <div class="burger" id="burger">&#9776;</div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#news">Actualités</a></li>
+          <li><a href="#music">Discographie</a></li>
+          <li><a href="#video">Vidéo</a></li>
+          <li><a href="#socials">Réseaux</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="section">
+      <h2>À propos</h2>
+      <p>Aya Nakamura est une chanteuse française d'origine malienne révélée par son titre "Djadja". Elle est aujourd'hui une des artistes francophones les plus influentes.</p>
+    </section>
+
+    <section id="news" class="section">
+      <h2>Actualités</h2>
+      <p>Sortie récente du single <strong>"Doudou"</strong>. Disponible sur toutes les plateformes.</p>
+    </section>
+
+    <section id="music" class="section">
+      <h2>Discographie</h2>
+      <ul>
+        <li>2017 - Journal Intime</li>
+        <li>2018 - Nakamura</li>
+        <li>2023 - DNK</li>
+      </ul>
+    </section>
+
+    <section id="video" class="section">
+      <h2>Clip Officiel</h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/prd-oyaxhCs" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <section id="socials" class="section">
+      <h2>Suivre Aya</h2>
+      <div class="socials">
+        <a href="#">Instagram</a>
+        <a href="#">TikTok</a>
+        <a href="#">YouTube</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Aya Nakamura - Site réalisé par Loan</p>
+  </footer>
+
+  <script>
+    // Burger menu toggle
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('nav-links');
+
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Scroll animation
+    const sections = document.querySelectorAll('.section');
+    const options = {
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      });
+    }, options);
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
